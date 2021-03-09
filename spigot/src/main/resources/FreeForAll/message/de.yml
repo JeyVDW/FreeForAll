@@ -1,0 +1,56 @@
+#  /$$      /$$ /$$                      /$$$$$$                  /$$
+# | $$$    /$$$|__/                     /$$__  $$                | $$
+# | $$$$  /$$$$ /$$ /$$$$$$$   /$$$$$$ | $$  \__/  /$$$$$$   /$$$$$$$  /$$$$$$
+# | $$ $$/$$ $$| $$| $$__  $$ /$$__  $$| $$       /$$__  $$ /$$__  $$ /$$__  $$
+# | $$  $$$| $$| $$| $$  \ $$| $$$$$$$$| $$      | $$  \ $$| $$  | $$| $$$$$$$$
+# | $$\  $ | $$| $$| $$  | $$| $$_____/| $$    $$| $$  | $$| $$  | $$| $$_____/
+# | $$ \/  | $$| $$| $$  | $$|  $$$$$$$|  $$$$$$/|  $$$$$$/|  $$$$$$$|  $$$$$$$
+# |__/     |__/|__/|__/  |__/ \_______/ \______/  \______/  \_______/ \_______/
+
+noPermission: "&cFFA &8» &7Dazu hast du keine Rechte"
+noPlayer: "&cFFA &8» &7Dies kannst du nur als Spieler"
+playerNotOnline: "&cFFA &8» &7Der Spieler &b%targetName% &7ist nicht online"
+playerNotExists: "&cFFA &8» &7Der Spieler &b%arg-1% &7existiert nicht"
+syntax: "&9FFA &8» &7Du kannst die folgenden Befehle ausführen:"
+
+ffa:
+  command:
+    syntax:
+      build: "&8- &6/ffa build &8- &7Versetzt dich in den/aus dem Baumodus"
+      buildOther: "&8- &6/ffa build <Spieler> &8- &7Versetzt dich oder andere in den/aus dem Baumodus"
+      setspawn: "&8- &6/ffa setspawn &8- &7Setzt den Spawnpunkt"
+      setkit: "&8- &6/ffa setkit &8- &7Erstellt das Kit anhand deinem aktuellen Inventar"
+      regionwand: "&8- &6/ffa regionwand &8- &7Gibt einen Knochen, um beide Locations des Spawnbereichs zu setzen"
+      setregion: "&8- &6/ffa setregion &8- &7Erstellt die Spawnregion mit den Koordinaten, die mit dem Knochen markiert worden sind"
+      stats: "&8- &6/ffa stats &8- &7Zeigt deine Statistiken"
+      statsOther: "&8- &6/ffa stats <Spieler> &8- &7Zeigt die Statistiken des Spielers"
+    buildOn: "&9FFA &8» &7Du kannst nun bauen"
+    buildOff: "&9FFA &8» &7Du nicht mehr bauen"
+    other:
+      buildOn: "&aFFA &8» &7Du hast %targetName% in den Baumodus versetzt"
+      buildOff: "&aFFA &8» &7Du hast %targetName% aus dem Baumodus versetzt"
+    setspawn: "&aFFA &8» &7Du hast den Spawnpunkt gesetzt"
+    setkit: "&aFFA &8» &7Du hast das Kit für alle gespeichert"
+    regionwand: "&aFFA &8» &7Dir wurde ein Knochen, um die Koordinaten der Spawnregion zu setzten, gegeben"
+    setregion:
+      success: "&aFFA &8» &7Die Spawnregion wurde erfolgreich erstellt"
+      locationMissing: "&cFFA &8» &7Bitte setze beide Locations, um die Spawnregion zu erstellen"
+    stats:
+      - "&9FFA &8» &7Stats von &b%targetName%"
+      - "&8- &7Rank: &6%targetRank%"
+      - "&8- &7Points: &6%targetPoints%"
+      - "&8- &7Kills: &6%targetKills%"
+      - "&8- &7Tode: &6%targetDeaths%"
+      - "&8- &7K/D: &6%targetKD%"
+  event:
+    join:
+      joinMessage: "&9FFA &8» &6%playerName% &7hat das Spiel betreten"
+      spawnNotSet: "&cFFA &8» &7Der Spawn wurde noch nicht gesetzt"
+    quit:
+      quitMessage: "&9FFA &8» &6%playerName% &7hat das Spiel verlassen"
+    killed: "&aFFA &8» &7Du hast &b%targetName% &7getötet"
+    killedBy: "&cFFA &8» &7Du wurdest von &d%killerName% &7getötet"
+    died: "&cFFA &8» &8» &7Du bist gestorben"
+    region:
+      setPos1: "&aFFA &8» &7Du hast die 1. Position gesetzt"
+      setPos2: "&aFFA &8» &7Du hast die 2. Position gesetzt"

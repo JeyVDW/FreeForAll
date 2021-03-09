@@ -1,0 +1,34 @@
+name: FreeForAll
+prefix: FFA
+# description:
+
+main: dev.minecode.freeforall.spigot.FFASpigot
+version: 0.1.0-Pre.1
+api-version: 1.8.8
+softdepend:
+  - Coins
+  - Vault
+
+author: MineCode
+authors:
+  - Jerome
+  - Leonard
+website: http://minecode.dev
+
+commands:
+  ffa:
+    description: A managing ffa-command
+    aliases: [ ]
+    usage: /ffa
+
+permissions:
+  ffa.use:
+    description: Access to the command "/ffa <stats/build/>"
+  ffa.stats.other:
+    description: Access to the command "/ffa stats [player]"
+  ffa.build:
+    description: Access to the command "/ffa build"
+  ffa.build.other:
+    description: Access to the command "/ffa build [player]"
+  ffa.setup:
+    description: Access to the command "/ffa <setspawn/setkit/regionwand/setregion/>

@@ -1,0 +1,38 @@
+#  /$$      /$$ /$$                      /$$$$$$                  /$$
+# | $$$    /$$$|__/                     /$$__  $$                | $$
+# | $$$$  /$$$$ /$$ /$$$$$$$   /$$$$$$ | $$  \__/  /$$$$$$   /$$$$$$$  /$$$$$$
+# | $$ $$/$$ $$| $$| $$__  $$ /$$__  $$| $$       /$$__  $$ /$$__  $$ /$$__  $$
+# | $$  $$$| $$| $$| $$  \ $$| $$$$$$$$| $$      | $$  \ $$| $$  | $$| $$$$$$$$
+# | $$\  $ | $$| $$| $$  | $$| $$_____/| $$    $$| $$  | $$| $$  | $$| $$_____/
+# | $$ \/  | $$| $$| $$  | $$|  $$$$$$$|  $$$$$$/|  $$$$$$/|  $$$$$$$|  $$$$$$$
+# |__/     |__/|__/|__/  |__/ \_______/ \______/  \______/  \_______/ \_______/
+
+# if true: Breaking and placing blocks is cancelled for players, who aren't in buildmode
+# if false: Every player is allowed to destroy and place blocks
+buildmode: true
+
+rewards:
+  # points for our Ranking
+  points:
+    kill: 20
+    death: 5
+
+  # Money for your Economy-System
+  money:
+    # if false: no money-rewards will be given
+    enable: false
+
+    # if true: if installed we use vault to distribute the reward (https://www.spigotmc.org/resources/34315/ // https://github.com/MilkBowl/Vault/releases/latest)
+    # if false: if installed we use Coins to distribute the reward (https://github.com/MineCodeDEV/Coins)
+    vault: false
+
+    # money rewards:
+    kill: 1
+    death: 0
+
+  # Commands that are executed from the console
+  commands:
+    enable: false
+    kill:
+      - /coins %targetName% add 1
+    death: [ ]

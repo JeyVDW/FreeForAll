@@ -1,0 +1,56 @@
+#  /$$      /$$ /$$                      /$$$$$$                  /$$
+# | $$$    /$$$|__/                     /$$__  $$                | $$
+# | $$$$  /$$$$ /$$ /$$$$$$$   /$$$$$$ | $$  \__/  /$$$$$$   /$$$$$$$  /$$$$$$
+# | $$ $$/$$ $$| $$| $$__  $$ /$$__  $$| $$       /$$__  $$ /$$__  $$ /$$__  $$
+# | $$  $$$| $$| $$| $$  \ $$| $$$$$$$$| $$      | $$  \ $$| $$  | $$| $$$$$$$$
+# | $$\  $ | $$| $$| $$  | $$| $$_____/| $$    $$| $$  | $$| $$  | $$| $$_____/
+# | $$ \/  | $$| $$| $$  | $$|  $$$$$$$|  $$$$$$/|  $$$$$$/|  $$$$$$$|  $$$$$$$
+# |__/     |__/|__/|__/  |__/ \_______/ \______/  \______/  \_______/ \_______/
+
+noPermission: "&cFFA &8» &7You have no permissions to do this"
+noPlayer: "&cFFA &8» &7You can only do this as a player"
+playerNotOnline: "&cFFA &8» &7The player &b%targetName% &7is not online"
+playerNotExists: "&cFFA &8» &7The player &b%targetName% &7does not exist"
+syntax: "&9FFA &8» &7You can run the following commands:"
+
+ffa:
+  command:
+    syntax:
+      build: "&8- &6/ffa build <Spieler> &8- &7Puts you in/out of build mode"
+      buildOther: "&8- &6/ffa build <Spieler> &8- &7Puts you or other players in/out of build mode "
+      setspawn: "&8- &6/ffa setspawn &8- &7Set the spawn"
+      setkit: "&8- &6/ffa setkit &8- &7Creates the kit with you current inventar contents"
+      regionwand: "&8- &6/ffa regionwand &8- &7Gives you a bone to set two locations for spawn region"
+      setregion: "&8- &6/ffa setregion &8- &7Creates the spawn region with the locations that were marked with a bone"
+      stats: "&8- &6/ffa stats &8- &7Shows your stats"
+      statsOther: "&8- &6/ffa stats [player] &8- &7Shows player's stats"
+    buildOn: "&aFFA &8» &7You are now in build mode "
+    buildOff: "&aFFA &8» &7You are no longer in build mode "
+    other:
+      buildOn: "&aFFA &8» &7You put %targetName% in build mode"
+      buildOff: "&aFFA &8» &7You put %targetName% out of build mode "
+    setspawn: "&aFFA &8» &7You set the spawn point"
+    setkit: "&aFFA &8» &7Kit was saved successfully"
+    regionwand: "&aFFA &8» &7You were given a bone to set the locations for the spawn region"
+    setregion:
+      success: "&aFFA &8» &7Spawn region successfully created"
+      locationMissing: "&cFFA &8» &7Please set both locations to create the spawn region"
+    stats:
+      - "&9FFA &8» &7Stats by &b%targetName%"
+      - "&8- &7Rank: &6%targetRank%"
+      - "&8- &7Points: &6%targetPoints%"
+      - "&8- &7Kills: &6%targetKills%"
+      - "&8- &7Deaths: &6%targetDeaths%"
+      - "&8- &7K/D: &6%targetKD%"
+  event:
+    join:
+      joinMessage: "&9FFA &8» &6%playerName% &7joined the game"
+      spawnNotSet: "&cFFA &8» &7Spawn is not set"
+    quit:
+      quitMessage: "&9FFA &8» &6%playerName% &7left the game"
+    killed: "&aFFA &8» &7You killed &b%targetName%"
+    killedBy: "&cFFA &8» &7You were killed by &d%killerName%"
+    died: "&cFFA &8» &8» &7Du bist gestorben"
+    region:
+      setPos1: "&aFFA &8» &7You set 1st position"
+      setPos2: "&aFFA &8» &7You set 2nd position"
